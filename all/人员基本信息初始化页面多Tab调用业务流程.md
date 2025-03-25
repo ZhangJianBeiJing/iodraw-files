@@ -16,9 +16,6 @@ sequenceDiagram
     from
     GC37 
 where
-    agb010 = :agb010 
-    and aae100 = '1' 
-order by
-    aae036 desc nulls last  
+    agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last  
     后端-->>-页面:返回外聘人员列表
 ```
