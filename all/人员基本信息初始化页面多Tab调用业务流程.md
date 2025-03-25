@@ -5,6 +5,7 @@ sequenceDiagram
     DB-->>StaffInfoController:GB01实体
     StaffInfoController->>+DB:select * from hnsydw_enterprise.GC02 where agb010 = ? and agc01b = ? and aae100 = '1'
     DB-->>StaffInfoController:GC02List
+    
     StaffInfoController->>+DB:select * from GC37 where agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last
     DB-->>StaffInfoController:GC37DTO List
     StaffInfoController-->>-staffInfoCtrl:返回在职人员列表、离退休人员列表、减少人员列表
