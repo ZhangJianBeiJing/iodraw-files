@@ -1,6 +1,6 @@
 ```mermaid
 sequenceDiagram
-    页面->>+后端: 页面初始化，查询在职人员列表、离退休人员列表、减少人员列表
+    页面->>+后端: 页面初始化，查询在职人员列表queryStaff、离退休人员列表、减少人员列表
     后端->>+DB:queryStaff select * from GC37 where agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last
     DB-->>后端:GC37DTO List
     后端->>+DB:select * from GC37 where agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last
