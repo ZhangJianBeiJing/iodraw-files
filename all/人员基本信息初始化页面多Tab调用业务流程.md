@@ -15,7 +15,8 @@ sequenceDiagram
     StaffInfoController-->>-staffInfoCtrl:返回离退休人员列表GC02DTO List
 
 
-    
+
+
     staffInfoCtrl->>+staffInfoCtrl:切换在职人员Tab
     staffInfoCtrl->>+StaffInfoController:查询在职人员列表、离退休人员列表、减少人员列表
     StaffInfoController-->>-staffInfoCtrl:返回在职人员列表、离退休人员列表、减少人员列表
