@@ -10,9 +10,7 @@ sequenceDiagram
     StaffInfoController->>+DB:from
     GC02 
 where
-    agb010 = :agb010 
-    and aae100 = '1'  
-    and (agc01b = '2' or agc01b = '3') order by aac007 desc nulls last 
+    agb010 = :agb010 and aae100 = '1' and (agc01b = '2' or agc01b = '3') order by aac007 desc nulls last 
     DB-->>StaffInfoController:GC37DTO List
     StaffInfoController-->>-staffInfoCtrl:返回在职人员列表、离退休人员列表、减少人员列表
     staffInfoCtrl->>+staffInfoCtrl:切换在职人员Tab
