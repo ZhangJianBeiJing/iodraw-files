@@ -15,9 +15,9 @@ sequenceDiagram
     StaffInfoController-->>-staffInfoCtrl:返回离退休人员列表GC02DTO List
 
     StaffInfoController->>+DB:select agb010 from hnsydw_enterprise.GB01 where aab001 = ? and aae100 = '1'
-    %% DB-->>StaffInfoController:GB01实体
+    %% DB-->>-StaffInfoController:GB01实体
     %% StaffInfoController->>+DB:select * from GC02 where agb010 = ? and aae100 = '0' order by agc025 desc nulls last 
-    %% DB-->>StaffInfoController:GC02 List
+    %% DB-->>-StaffInfoController:GC02 List
     %% StaffInfoController-->>-staffInfoCtrl:返回减少人员列表GC02DTO List
 
     staffInfoCtrl->>+staffInfoCtrl:切换在职人员Tab
