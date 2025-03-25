@@ -15,9 +15,7 @@ where
     and (
         agc01b = '2' 
         or agc01b = '3'
-    ) 
-order by
-    aac007 desc nulls last 
+    ) order by aac007 desc nulls last 
     DB-->>StaffInfoController:GC37DTO List
     StaffInfoController-->>-staffInfoCtrl:返回在职人员列表、离退休人员列表、减少人员列表
     staffInfoCtrl->>+staffInfoCtrl:切换在职人员Tab
