@@ -2,7 +2,7 @@
 sequenceDiagram
     staffInfoCtrl->>+StaffInfoController: 页面初始化，查询在职人员queryStaff{aab001:aab001}、离退休人员列表、减少人员列表
     StaffInfoController->>+DB:select agb010 from hnsydw_enterprise.GB01 where aab001 = ? and aae100 = '1'
-    DB-->>StaffInfoController:GC37DTO List
+    DB-->>StaffInfoController:GB01实体
     StaffInfoController->>+DB:select * from GC37 where agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last
     DB-->>StaffInfoController:GC37DTO List
     StaffInfoController->>+DB:select * from GC37 where agb010 = :agb010 and aae100 = '1' order by aae036 desc nulls last
